@@ -1,0 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Medico extends Persona{
+    
+    private String institucionTrabajo;
+    private String especialidad;
+    private String estadoCivil;
+    
+     public void establecerinstitucionTrabajo(String institucionTrabajo){
+        this.institucionTrabajo= institucionTrabajo;
+        
+    }
+    
+    public String obtenerinstitucionTrabajo(){
+        return this.institucionTrabajo;
+    }
+    
+    public void establecerespecialidad(String especialidad){
+        this.especialidad= especialidad;
+        
+    }
+    
+    public String obtenerespecialidad(){
+        return this.especialidad;
+    }
+    
+    public void establecerestadoCivil(String estadoCivil){
+        this.estadoCivil= estadoCivil;
+        
+    }
+    
+    public String obtenerestadoCivil(){
+        return this.estadoCivil;
+    }
+    
+    public Medico(){    
+   establecerNombre("Candido Mejia");
+        establecerSexo("Masculino");
+        establecerEdad(45);
+        establecerTelefono(33865921);
+        establecerNacionalidad("Hondureña");
+        establecerinstitucionTrabajo("Clinica Los Andes");
+        establecerespecialidad("Dermatologia");
+        establecerestadoCivil("Casado");
+    }
+    
+    public void imprimirInformacionMedico(){
+        System.out.println("Institucion donde Labora: " + institucionTrabajo);
+        System.out.println("Especialidad: " + especialidad);
+        System.out.println("Estado Civil: " + estadoCivil);
+    }
+}
