@@ -1,0 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Deportista extends Persona {
+    private String equipo;
+    private String posicion;
+    private String estadoCivil;
+    
+     public void establecerequipo(String equipo){
+        this.equipo= equipo;
+        
+    }
+    
+    public String obtenerequipo(){
+        return this.equipo;
+    }
+    
+    public void establecerposicion(String posicion){
+        this.posicion= posicion;
+        
+    }
+    
+    public String obtenerposicion(){
+        return this.posicion;
+    }
+    
+    public void establecerestadoCivil(String estadoCivil){
+        this.estadoCivil= estadoCivil;
+        
+    }
+    
+    public String obtenerestadoCivil(){
+        return this.estadoCivil;
+    }
+    
+    public Deportista(){
+        establecerNombre("Carlos Pineda");
+        establecerSexo("Masculino");
+        establecerEdad(19);
+        establecerTelefono(98563214);
+        establecerNacionalidad("Hondureña");
+        establecerequipo("Olimpia");
+        establecerposicion("Delantero");       
+        establecerestadoCivil("Soltero");
+        
+    }
+    public void imprimirInformacionDeportista(){
+        System.out.println("Equipo: " + equipo);
+        System.out.println("Posicion: " + posicion);
+        System.out.println("Estado Civil: " + estadoCivil);
+        System.out.println("\n");
+    }
+}
