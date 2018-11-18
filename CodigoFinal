@@ -1,0 +1,301 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Proyecto {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      
+    Estudiante estudiante= new Estudiante();
+    Deportista deportista= new Deportista();
+    Medico medico= new Medico();
+    
+   System.out.println("Primera Persona\n");
+   estudiante.imprimirInformacion();
+   estudiante.imprimirInformacionEstudiante();
+   
+     System.out.println("Segunda Persona\n");
+     deportista.imprimirInformacion();
+     deportista.imprimirInformacionDeportista();
+     
+     System.out.println("Tercera Persona\n");
+     medico.imprimirInformacion();
+     medico.imprimirInformacionMedico();
+   
+           }
+    
+}
+
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Persona {
+    
+    private String nombre;
+    private String sexo;
+    public int edad;
+    public int telefono;
+    private String nacionalidad;
+    
+    public Persona(){
+        //Constructor sin parametros
+    }
+    
+    public void establecerNombre(String nombre){
+        this.nombre= nombre;
+        
+    }
+    public String obtenerNombre(){
+        return this.nombre;
+    }
+    public void establecerSexo(String sexo){
+        this.sexo = sexo;
+        
+    }
+    public String obtenerSexo(){
+        return this.sexo;
+    }
+    
+    public void establecerEdad(int edad){
+        this.edad= edad;
+        
+    }
+    public int obtenerEdad(){
+        return this.edad;
+    }
+    
+    public void establecerTelefono(int telefono){
+        this.telefono= telefono;
+        
+    }
+    public int obtenertelefono(){
+        return this.telefono;
+    }
+    
+    public void establecerNacionalidad(String nacionalidad){
+        this.nacionalidad= nacionalidad;
+        
+    }
+    public String obtenerNacionalidad(){
+        return this.nacionalidad;
+    }
+    
+    
+    public void imprimirInformacion(){
+     
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Sexo: " + sexo);
+        System.out.println("Edad: " + edad);
+        System.out.println("Telefono: " + telefono);
+        System.out.println("Nacionalidad: " + nacionalidad);
+    }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Estudiante extends Persona{
+    
+   private String institucion;
+   public String carrera;
+   private String lugar_vive;
+   
+   
+   public void establecerinstitucion(String institucion){
+   this.institucion=institucion;
+   }
+   
+   public String obtenerinstitucion(){
+       return this.institucion;
+       
+   }
+   
+   public void establecercarrera(String carrera){
+   this.carrera=carrera;
+   }
+   
+   public String obtenercarrera(){
+       return this.carrera;
+       
+   }
+   
+   public void establecerlugarvive(String lugar_vive){
+   this.lugar_vive=lugar_vive;
+   }
+   
+   public String obtenerlugar_vive(){
+       return this.lugar_vive;
+       
+   }
+   
+   
+   
+    public Estudiante(){
+        establecerNombre("Daniel Isaac Sanchez");
+        establecerSexo("Masculino");
+        establecerEdad(15);
+        establecerTelefono(96857465);
+        establecerNacionalidad("Hondureña");
+        establecerinstitucion("Instituto Gubernamental Cristo Rey");
+        establecercarrera("Bachillerato Tecnico en Informatica");
+        establecerlugarvive("Col. La Mora, Choloma Cortes.");
+    }
+    
+    public void imprimirInformacionEstudiante(){
+        System.out.println("Institucion: " + institucion);
+        System.out.println("Carrera: " + carrera);
+        System.out.println("Lugar donde Vive: " + lugar_vive);
+        System.out.println("\n");
+    }
+}
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Deportista extends Persona {
+    private String equipo;
+    private String posicion;
+    private String estadoCivil;
+    
+     public void establecerequipo(String equipo){
+        this.equipo= equipo;
+        
+    }
+    
+    public String obtenerequipo(){
+        return this.equipo;
+    }
+    
+    public void establecerposicion(String posicion){
+        this.posicion= posicion;
+        
+    }
+    
+    public String obtenerposicion(){
+        return this.posicion;
+    }
+    
+    public void establecerestadoCivil(String estadoCivil){
+        this.estadoCivil= estadoCivil;
+        
+    }
+    
+    public String obtenerestadoCivil(){
+        return this.estadoCivil;
+    }
+    
+    public Deportista(){
+        establecerNombre("Carlos Pineda");
+        establecerSexo("Masculino");
+        establecerEdad(19);
+        establecerTelefono(98563214);
+        establecerNacionalidad("Hondureña");
+        establecerequipo("Olimpia");
+        establecerposicion("Delantero");       
+        establecerestadoCivil("Soltero");
+        
+    }
+    public void imprimirInformacionDeportista(){
+        System.out.println("Equipo: " + equipo);
+        System.out.println("Posicion: " + posicion);
+        System.out.println("Estado Civil: " + estadoCivil);
+        System.out.println("\n");
+    }
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Medico extends Persona{
+    
+    private String institucionTrabajo;
+    private String especialidad;
+    private String estadoCivil;
+    
+     public void establecerinstitucionTrabajo(String institucionTrabajo){
+        this.institucionTrabajo= institucionTrabajo;
+        
+    }
+    
+    public String obtenerinstitucionTrabajo(){
+        return this.institucionTrabajo;
+    }
+    
+    public void establecerespecialidad(String especialidad){
+        this.especialidad= especialidad;
+        
+    }
+    
+    public String obtenerespecialidad(){
+        return this.especialidad;
+    }
+    
+    public void establecerestadoCivil(String estadoCivil){
+        this.estadoCivil= estadoCivil;
+        
+    }
+    
+    public String obtenerestadoCivil(){
+        return this.estadoCivil;
+    }
+    
+    public Medico(){    
+   establecerNombre("Candido Mejia");
+        establecerSexo("Masculino");
+        establecerEdad(45);
+        establecerTelefono(33865921);
+        establecerNacionalidad("Hondureña");
+        establecerinstitucionTrabajo("Clinica Los Andes");
+        establecerespecialidad("Dermatologia");
+        establecerestadoCivil("Casado");
+    }
+    
+    public void imprimirInformacionMedico(){
+        System.out.println("Institucion donde Labora: " + institucionTrabajo);
+        System.out.println("Especialidad: " + especialidad);
+        System.out.println("Estado Civil: " + estadoCivil);
+    }
+}
