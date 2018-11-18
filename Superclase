@@ -1,0 +1,73 @@
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Persona {
+    
+    private String nombre;
+    private String sexo;
+    public int edad;
+    public int telefono;
+    private String nacionalidad;
+    
+    public Persona(){
+        //Constructor sin parametros
+    }
+    
+    public void establecerNombre(String nombre){
+        this.nombre= nombre;
+        
+    }
+    public String obtenerNombre(){
+        return this.nombre;
+    }
+    public void establecerSexo(String sexo){
+        this.sexo = sexo;
+        
+    }
+    public String obtenerSexo(){
+        return this.sexo;
+    }
+    
+    public void establecerEdad(int edad){
+        this.edad= edad;
+        
+    }
+    public int obtenerEdad(){
+        return this.edad;
+    }
+    
+    public void establecerTelefono(int telefono){
+        this.telefono= telefono;
+        
+    }
+    public int obtenertelefono(){
+        return this.telefono;
+    }
+    
+    public void establecerNacionalidad(String nacionalidad){
+        this.nacionalidad= nacionalidad;
+        
+    }
+    public String obtenerNacionalidad(){
+        return this.nacionalidad;
+    }
+    
+    
+    public void imprimirInformacion(){
+     
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Sexo: " + sexo);
+        System.out.println("Edad: " + edad);
+        System.out.println("Telefono: " + telefono);
+        System.out.println("Nacionalidad: " + nacionalidad);
+    }
+}
+
