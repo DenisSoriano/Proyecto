@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+/**
+ *
+ * @author USER
+ */
+public class Estudiante extends Persona{
+    
+   private String institucion;
+   public String carrera;
+   private String lugar_vive;
+   
+   
+   public void establecerinstitucion(String institucion){
+   this.institucion=institucion;
+   }
+   
+   public String obtenerinstitucion(){
+       return this.institucion;
+       
+   }
+   
+   public void establecercarrera(String carrera){
+   this.carrera=carrera;
+   }
+   
+   public String obtenercarrera(){
+       return this.carrera;
+       
+   }
+   
+   public void establecerlugarvive(String lugar_vive){
+   this.lugar_vive=lugar_vive;
+   }
+   
+   public String obtenerlugar_vive(){
+       return this.lugar_vive;
+       
+   }
+   
+   
+   
+    public Estudiante(){
+        establecerNombre("Daniel Isaac Sanchez");
+        establecerSexo("Masculino");
+        establecerEdad(15);
+        establecerTelefono(96857465);
+        establecerNacionalidad("Hondureña");
+        establecerinstitucion("Instituto Gubernamental Cristo Rey");
+        establecercarrera("Bachillerato Tecnico en Informatica");
+        establecerlugarvive("Col. La Mora, Choloma Cortes.");
+    }
+    
+    public void imprimirInformacionEstudiante(){
+        System.out.println("Institucion: " + institucion);
+        System.out.println("Carrera: " + carrera);
+        System.out.println("Lugar donde Vive: " + lugar_vive);
+        System.out.println("\n");
+    }
+}
+
+
